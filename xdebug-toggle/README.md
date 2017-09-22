@@ -45,3 +45,6 @@ xdebug-toggle on                         # enables xdebug
 xdebug-toggle off                        # disables xdebug
 xdebug-toggle on|off --no-server-restart # toggles xdebug without restarting apache or php-fpm
 ```
+[xdebug]: http://xdebug.org/
+[xdebug-osx]: https://github.com/w00fz/xdebug-osx
+[brew]: http://brew.sh/
