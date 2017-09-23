@@ -1,9 +1,11 @@
 #!/bin/bash
 
+trim () { while read -r line; do echo "$line"; done; }
+
 if [[ $(ls -A composer.json 2> /dev/null) ]]; then
-    php_version_unformated=$(cat composer.json | grep '"php":')
+    php_version_unformated=$(cat composer.json | grep '"php":' | trim)
     if [[ $php_version_unformated ]]; then
-        php_version_dot=$(echo "$php_version_unformated" | cut -c15-17)
+        php_version_dot=$(echo "$php_version_unformated" | cut -c9-11)
     else
         echo ""
         echo "Missing php version in composer.json"
